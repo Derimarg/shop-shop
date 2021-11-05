@@ -14,7 +14,7 @@
 <h3 align="center" id="shop-shop">Shop Shop</h3>
 
 <p align="center">
-As a user, I want to experience better performance across the features I use in the application, view and filter products by category, click on a products to see full details.
+E-commerce platform, that allows the user to view and filter products by category, click on products to see full details.
 <br />
 <a href="#how-to-download"><strong>Explore the docs »</strong></a>
 <br />
@@ -29,6 +29,8 @@ As a user, I want to experience better performance across the features I use in 
 <br />
 <br />
 
+> Link web page: https://dg-shop-shop.herokuapp.com/
+
 <details open="open">
 <summary>Table of Contents</summary>
 <ul>
@@ -37,7 +39,6 @@ As a user, I want to experience better performance across the features I use in 
 <li><a href="#how-to-download">Download</a></li>
 <li><a href="#installation">Installation</a></li>
 <li><a href="#prerequisites">Prerequisites</a></li>
-<li><a href="#test">Test</a></li>
 <li><a href="#usage">Usage</a></li>
 <li><a href="#roadmap">Roadmap</a></li>
 <li><a href="#contributing">Contributing</a></li>
@@ -50,16 +51,48 @@ As a user, I want to experience better performance across the features I use in 
 
 ## Description
 
-Shop Shop
+As a senior engineer working on an e-commerce platform I want my platform to use `Redux` to manage global state instead of the Context API, so that my website's state management is taken out of the React ecosystem, will follow the conditions:
+
+- Reviewing the app’s store, I find that the app uses a Redux store instead of the Context API.
+
+- Reviewing the way the React front end accesses the store, I find that the app uses a Redux provider.
+
+- Reviewing the way the app determines changes to its global state, I find that the app passes reducers to a Redux store instead of using the Context API.
+
+- Reviewing the way the app extracts state data from the store, I find that the app uses Redux instead of the Context API.
+
+- Reviewing the way the app dispatches actions, I find that the app uses Redux instead of the Context API.
+
+<br/>
 
 ### Example:
 
-![Demo](./assets/img/demo.gif)
+<br/>
+<br/>
+
+![Demo](./assets/img/shop-shop-demo.gif)
+
+<br/>
+<br/>
 
 ## Technologies
 
-- Node
-- NPM
+- <p><a href="https://nodejs.org/">Node.js</a></p>
+- <p><a href="https://www.npmjs.com/">NPM</a></p>
+- <p><a href="https://reactjs.org/">React</a></p>
+- <p><a href="https://www.npmjs.com/package/graphql">NPM GrapghQL</a></p>
+- <p><a href="apollographql.com/docs/react/get-started/">NPM Apollo Clinet</a></p>
+- <p><a href="https://www.npmjs.com/package/apollo-server-express">NPM Apollo Server Express</a></p>
+- <p><a href="https://www.npmjs.com/package/react-router">NPM React Router</a></p>
+- <p><a href="https://www.npmjs.com/package/react-router-dom">NPM React Router DOM</a></p>
+- <p><a href="https://www.npmjs.com/package/concurrently">NPM Concurrently</a></p>
+- <p><a href="https://www.npmjs.com/package/jsonwebtoken">NPM JSON Web Tokens</a></p>
+- <p><a href="https://www.npmjs.com/package/jwt-decode">NPM JWT Decode</a></p>
+- <p><a href="https://www.npmjs.com/package/nodemon">NPM Nodemon</a></p>
+- <p><a href="https://www.npmjs.com/package/if-env">NPM If Env</a></p>
+- <p><a href="https://redux.js.org/">Redux</a></p>
+- <p><a href="https://www.mongodb.com/">MongoDB</a></p>
+- <p><a href="https://www.heroku.com/">Heroku</a></p>
 
 [Back To Top](#shop-shop)
 
@@ -94,15 +127,7 @@ Shop Shop
 Before of using this application, is require to install dependencies, run the following command in your terminal:
 
 ```
-npm i
-```
-
-## Test
-
-To run tests, run these commands:
-
-```
-npm test
+npm install
 ```
 
 [Back To Top](#shop-shop)
@@ -111,7 +136,30 @@ npm test
 
 ## Usage
 
-Open Source
+This is a open source program, feel free to use it, contact me to request features.
+
+```js script
+ "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "cd server && npm start",
+    "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "heroku-postbuild": "cd client && npm run build"
+  }
+```
+
+### `npm run start:dev`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `git push heroku main`
+
+Will deploy app to heroku
 
 <!-- ROADMAP -->
 
@@ -152,9 +200,13 @@ For additional help or questions about collaboration, contact me at: derimargray
 
 MIT License
 
-Copyright © 2021, Derimar Gray.
+Copyright (c) 2021 Derimar Gray
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [repo-size]: https://img.shields.io/github/repo-size/Derimarg/shop-shop?style=for-the-badge
 [github-language]: https://img.shields.io/github/languages/top/Derimarg/shop-shop?color=yellow&style=for-the-badge
